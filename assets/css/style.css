@@ -1,0 +1,126 @@
+body {
+    margin:0;
+    background: #f1f1f1;
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(80, 80, 80);
+}
+
+ul img {
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    height: 75px;
+}
+
+.active {
+  background-color: #444444;
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+}
+
+.header img {
+    height: 300px;
+    margin-bottom: -125px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4, minmax(auto, auto));
+    gap: 10px;
+}
+
+.container > div {
+    background-color: #d8d8d8;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.header {
+    grid-column: span 3;
+}
+
+.left {
+    height: auto;
+    padding: 20px;
+    grid-row: span 3;
+}
+
+.left h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.news-card {
+    width: 320px;
+    margin: 0 auto 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.news-card:hover {
+    transform: scale(1.03);
+}
+
+.news-card img {
+    width: 320px;
+    height: auto;
+    display: block;
+}
+
+.news-card a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.news-card a:hover {
+    color: #007bff;
+}
+
+.center {
+    grid-row: span 3;
+}
