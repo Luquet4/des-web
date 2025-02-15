@@ -1,5 +1,5 @@
 body {
-    margin:0;
+    margin: 0;
     background: #d8d8d8;
     font-family: "Jost", serif;
     font-optical-sizing: auto;
@@ -11,31 +11,31 @@ html {
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: gray;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 li {
-  float: left;
+    float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: rgb(80, 80, 80);
+    background-color: rgb(80, 80, 80);
 }
 
 ul img {
@@ -46,7 +46,7 @@ ul img {
 }
 
 .active {
-  background-color: #444444;
+    background-color: #444444;
 }
 
 .header {
@@ -67,11 +67,9 @@ ul img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .container > div {
     background-color: white;
     text-align: center;
-    
     font-size: 30px;
 }
 
@@ -103,7 +101,6 @@ ul img {
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
-
 
 .news-card:hover {
     transform: scale(1.03);
@@ -178,7 +175,6 @@ ul img {
     max-width: 100%;
 }
 
-
 .about {
     width: 350px;
     height: 350px;
@@ -212,4 +208,76 @@ ul img {
     bottom: 0;
     width: 100%;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .header img {
+        height: 200px;
+    }
+
+    .left, .center, .right {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .artic-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        position: relative;
+        text-align: center;
+    }
+
+    li {
+        float: none;
+        display: inline-block;
+    }
+
+    .news-card {
+        width: 100%;
+    }
+
+    .artic-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header img {
+        height: 150px;
+    }
+
+    .left h2 {
+        font-size: 30px;
+    }
+
+    .news-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
 }
