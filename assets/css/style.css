@@ -1,9 +1,13 @@
 body {
     margin:0;
-    background: #f1f1f1;
+    background: #d8d8d8;
     font-family: "Jost", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -15,6 +19,7 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 li {
@@ -57,19 +62,23 @@ ul img {
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(4, minmax(auto, auto));
     gap: 10px;
+    align-items: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .container > div {
-    background-color: #d8d8d8;
+    background-color: white;
     text-align: center;
-    padding: 10px;
+    
     font-size: 30px;
 }
 
 .header {
     grid-column: span 3;
+    width: 100%;
+    max-width: 100%;
 }
 
 .left {
@@ -88,7 +97,7 @@ ul img {
 .news-card {
     width: 320px;
     margin: 0 auto 15px;
-    background: white;
+    background: rgb(199, 199, 199);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -122,5 +131,85 @@ ul img {
 }
 
 .center {
-    grid-row: span 3;
+    align-self: start;
+}
+
+.artic-img img {
+    margin-top: 0.5%;
+    width: 712px;
+    height: 350px;
+    justify-items: center;
+    display: flexbox;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.artic-img {
+    background-color: rgb(167, 167, 167);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.artic-img h2 {
+    text-align: center;
+    margin: 0.5% 1% 1%;
+}
+
+.artic-img p {
+    justify-items: left;
+    text-align: left;
+    font-size: 15px;
+    margin: 0 1% 1%;
+}
+
+.artic-txt {
+    width: 100%;
+    max-width: 100%;
+}
+
+.artic-txt article {
+    text-align: justify;
+    margin: 1%;
+}
+
+.right {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.about {
+    width: 350px;
+    height: 350px;
+    background-color: #aaaaaa;
+    align-items: center;
+    margin: auto auto 5%;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about article {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    padding: 10px;
+    overflow: auto;
+    margin: auto;
+    text-align: justify;
+}
+
+.footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
 }
